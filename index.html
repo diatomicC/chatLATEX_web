@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
-<head>
-	<title>수식 이미지 변환기</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div>
-		<h1>수식 이미지 변환기</h1>
-		<textarea id="input" placeholder="수식을 입력하세요"></textarea>
-		<button id="convert" onclick="convert()">변환</button>
-		<div id="output"></div>
-	</div>
-	<script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8"> 
+    <title>LaTeX Chat</title> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+  </head>
+  <body>
+    <div id="chat-window">
+      <div class="message-container system-message">
+        <p>You are a LaTeX expert.</p>
+      </div>
+    </div>
+    <div id="input-container">
+      <input type="text" id="chat-input" placeholder="Type your message here..." onkeydown="if(event.keyCode===13) search()">
+      <button id="submit-btn" onclick="search()">Send</button>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
 </html>
