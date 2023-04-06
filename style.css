@@ -36,6 +36,7 @@ color: #666;
 /* Input container styles */
 #input-container {
 display: flex;
+align-items: center;
 margin: 20px auto;
 width: 90%;
 }
@@ -50,6 +51,29 @@ font-size: 16px;
 padding: 10px;
 }
 
+/* API Key styles */
+#api_key {
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex: 1;
+	font-size: 16px;
+	padding: 10px;
+}
+/* API Key styles */
+#label {
+	margin-right: 10px;
+	font-size: 16px;
+	
+}
+/* API Key styles */
+#get_api_key {
+	border: none;
+	border-radius: 30px;
+	flex: 1;
+	font-size: 16px;
+	padding-left: 80px;
+}
 /* Submit button styles */
 #submit-btn {
 background-color: #9b5de5;
