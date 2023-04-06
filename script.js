@@ -1,5 +1,5 @@
 function search() {
-  const api_key = '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'
+  const api_key = document.getElementById('api_key').value
   const keywords = document.getElementById('chat-input').value
   const messages = [
 { role: 'system', content: 'You are a LaTeX expert.' },
