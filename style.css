@@ -3,6 +3,14 @@
 	padding: 0; 
 	font-family: Arial;
 }
+#api_key_button {
+	margin-top: 25px;
+  }
+#get_api_key, hr {
+	margin-left: 50px;
+}
+  
+  
 
 /* Chat window styles */
 #chat-window {
