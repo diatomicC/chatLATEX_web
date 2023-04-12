@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <title>LaTeX Chat</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js"></script>
+  <style>
+    /* CSS 코드 추가 */
+    #get_api_key, hr {
+      margin-left: -20px;
+    }
+
+    #get_api_key a {
+      display: inline-block;
+      margin-top: 0px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    #get_api_key a:hover {
+      background-color: #2980b9;
+    }
+
+    #submit-btn {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #submit-btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="chat-window">
-    <div class="message-container system-message">
-      <p>You are a LaTeX expert.</p>
-    </div>
-  </div>
   <div id="get_api_key">
-    <p>개인이 소유하고 있는 ChatGPT API 키가 있어야 하는 서비스입니다.  API 키를 발급 받으시려면 아래의 링크로 들어가주세요.(회원가입 필요)</p>
-    <a href =https://platform.openai.com/account/api-keys target="_blank">https://platform.openai.com/account/api-keys</a>
+    <div id="api_key_text">
+      <h4>개인이 소유하고 있는 ChatGPT API 키가 있어야 하는 서비스입니다. <br>API 키를 발급 받으시려면 아래의 링크로 들어가주세요.(회원가입 필요)</h4>
+    </div>
+    <div id="api_key_button">
+      <a href="https://platform.openai.com/account/api-keys" target="_blank">API 발급 받기 </a>
+    </div>
+    <hr>
   </div>
+
+  <style>
+    #api_key_text {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    #api_key_button {
+      display: inline-block;
+      margin-left: 40px;
+    }
+  </style>
+
   <div id="input-container">
     <label id='label' for="api_key">API 키: </label>
     <input type="text"  id="api_key" name="api_key" placeholder="Type your own API key here..." name="api_key" required />
   </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <div id="input-container">
     <label id='label' for="api_key">수식입력 : </label>
     <input type="text" id="chat-input" placeholder="Type your message here..."
       onkeydown="if(event.keyCode===13) search()">
     <button id="submit-btn" onclick="search()">Send</button>
   </div>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <div id="chat-window">
+    <div class="message-container system-message">
+      <p>You are a LaTeX expert.</p>
+    </div>
+  </div>
 </body>
-
 </html>
