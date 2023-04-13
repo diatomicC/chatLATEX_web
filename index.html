@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <title>LaTeX Chat</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script>
+    function FixMathJax() {
+      var assistiveMML = document.getElementsByClassName("mjx-assistive-mml");
+      for (var i = 0; i < assistiveMML.length; i++) {
+        assistiveMML[i].style.opacity = "0.0";
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
   <script src="script.js"></script>
   <style>
     /* CSS 코드 추가 */
@@ -78,7 +91,7 @@
     <button id="submit-btn" onclick="search()">Send</button>
   </div>
   <div id="chat-window">
-    <div class="message-container system-message">
+    <div class="message-container system-message" id="latex">
       <p>You are a LaTeX expert.</p>
     </div>
   </div>

@@ -10,7 +10,10 @@
 	margin-left: 50px;
 }
   
-  
+canvas {
+	width: 400px;
+	height: 200px;
+  }  
 
 /* Chat window styles */
 #chat-window {
