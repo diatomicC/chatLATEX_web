@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <meta charset="UTF-8">
   <title>LaTeX Chat</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js"></script>
   <style>
     /* CSS 코드 추가 */
-    #get_api_key, hr {
-      margin-left: -20px;
-    }
+   
 
     #get_api_key a {
       display: inline-block;
       margin-top: 0px;
       padding: 10px 20px;
-      background-color: #3498db;
-      color: #fff;
+      background-color: #ffffff;
+      color: #008281;
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
 
-    #get_api_key a:hover {
-      background-color: #2980b9;
-    }
+    /* #get_api_key a:hover {
+      background-color: #016360;
+    } */
 
     #submit-btn {
       margin-left: 10px;
       padding: 10px 20px;
-      background-color: #3498db;
+      background-color: #008080;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -38,20 +37,24 @@
     }
 
     #submit-btn:hover {
-      background-color: #2980b9;
+      background-color: #016360;
     }
+
+
   </style>
 </head>
 
 <body>
+  
   <div id="get_api_key">
     <div id="api_key_text">
       <h4>개인이 소유하고 있는 ChatGPT API 키가 있어야 하는 서비스입니다. <br>API 키를 발급 받으시려면 아래의 링크로 들어가주세요.(회원가입 필요)</h4>
     </div>
     <div id="api_key_button">
-      <a href="https://platform.openai.com/account/api-keys" target="_blank">API 발급 받기 </a>
+      <h4><a href="https://platform.openai.com/account/api-keys" target="_blank">API 발급 받기 </a></h4>
     </div>
-    <hr>
+
+    
   </div>
 
   <style>
@@ -61,8 +64,9 @@
     }
 
     #api_key_button {
+
       display: inline-block;
-      margin-left: 40px;
+
     }
   </style>
 
