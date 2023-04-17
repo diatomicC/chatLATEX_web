@@ -49,8 +49,9 @@ function search() {
               <p>
               $$${latexContent}$$
               </p>
+              </div>
               <button id="copy-btn" onclick="copyToClipboard()">Copy</button>
-            </div>`
+           `
           } else {
             resultDiv.innerHTML += 
             `<div class="message-container system-message" id="latexresult">
