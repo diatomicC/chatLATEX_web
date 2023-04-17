@@ -4,6 +4,29 @@ body {
 	font-family: Arial;
 	background-color: #f4ece6;
 }
+#translate{
+	display: block;
+	margin: 10px 0 0 0; /* 상하 좌우 마진값 수정 */
+	padding: 10px 20px; /* 패딩값 수정 */
+	margin-left: 56px;
+	margin-right: 56px;
+}
+/* 번역버튼 디자인 */
+#translate button{
+	margin-left: 10px;
+	padding: 10px 20px;
+	/*background-color: #a4c9b8;
+	background-color: #csddd6;
+	background-color: #a0c8c3;
+	background-color: #bfdad7;*/
+	background-color: #93c2c4;
+	/*background-color: #cce2e4;*/
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
 
 #api_key_button {
 	margin-top: 25px;
@@ -23,8 +46,38 @@ body {
 	margin-left: 56px;
 	margin-right: 56px;
   }
+/* CSS 코드 추가 */
+   
 
+#get_api_key a {
+	display: inline-block;
+	margin-top: 0px;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	color: #008281;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
 
+  /* #get_api_key a:hover {
+	background-color: #016360;
+  } */
+
+  #submit-btn {
+	margin-left: 10px;
+	padding: 10px 20px;
+	background-color: #008080;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+
+  #submit-btn:hover {
+	background-color: #016360;
+  }
 /* Chat window styles */
 #chat-window {
 background-color: #ebf2ed;
