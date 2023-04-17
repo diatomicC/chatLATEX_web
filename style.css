@@ -27,6 +27,7 @@ body {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
+
 #api_key_button {
 	margin-top: 25px;
   }
@@ -77,7 +78,6 @@ body {
   #submit-btn:hover {
 	background-color: #016360;
   }
-
 /* Chat window styles */
 #chat-window {
 background-color: #ebf2ed;
