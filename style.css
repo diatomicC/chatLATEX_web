@@ -28,12 +28,9 @@ body {
 	transition: background-color 0.3s ease;
 }
 
-#api_key_button {
-	margin-top: 25px;
-  }
 #get_api_key, hr {
-	margin: 20px 0 0 0; /* 왼쪽 마진값 수정 */
-  }
+	margin: 20px 20px 0 0; /* 왼쪽 마진값 수정 */
+}
 #get_api_key {
 	display: block; /* 블록 요소로 변경 */
 	background-color: #588373; /* 배경색 추가 */
@@ -51,7 +48,7 @@ body {
 
 #get_api_key a {
 	display: inline-block;
-	margin-top: 0px;
+	margin-top: 10%;
 	padding: 10px 20px;
 	background-color: #ffffff;
 	color: #008281;
@@ -78,6 +75,7 @@ body {
   #submit-btn:hover {
 	background-color: #016360;
   }
+
 /* Chat window styles */
 #chat-window {
 background-color: #ebf2ed;
