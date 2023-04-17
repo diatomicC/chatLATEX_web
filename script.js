@@ -45,38 +45,46 @@ function search() {
 
           if (latexContent) {
             resultDiv.innerHTML += 
-            `<div class="message-container system-message" id="latexresult">
+            `<div class="message-container system-message" id="equation">
               <p>
               $$${latexContent}$$
               </p>
               </div>
-              <button id="copy-btn" onclick="copyToClipboard()">Copy</button>
            `
           } else {
             resultDiv.innerHTML += 
-            `<div class="message-container system-message" id="latexresult">
+            `<div class="message-container system-message" id="equation">
               We cannot provide LaTeX format for following equation. Please enter again.
             </div>`
           }
           //디버깅용
 
           // resultDiv.innerHTML += 
-          // `<div class="message-container system-message" id="latexresult">
+          // `<div class="message-container system-message" id="equation">
           //   ${choice.message.content.split('\n').join('<br/>')}
           //   <button id="copy-btn" onclick="copyToClipboard()">Copy</button>
           // </div>`
         })
-      resultDiv.scrollTop = resultDiv.scrollHeight;
-      MathJax.typesetPromise([resultDiv]).then(() => {
-        // 처리된 결과를 출력
-        document.body.appendChild(resultDiv);
-      });
+        MathJax.typesetPromise([resultDiv]).then(() => {
+          // 처리된 결과를 출력
+          document.body.appendChild(resultDiv);
+        });
+        hideTags();
+        resultDiv.innerHTML += 
+        `<div class="message-container system-message" id="latexresult">
+          <p style="text-align: center">
+          $$${latexContent}$$
+          </p>
+          </div>
+          <button id="copy-btn" onclick="copyToClipboard()">Copy</button>
+       `
+      //resultDiv.appendChild(downloadButton);
       // 다운로드 버튼 생성
       const downloadButton = document.createElement("button");
       downloadButton.innerText = "Download";
       downloadButton.addEventListener("click", () => {
         const canvas = document.createElement("canvas");
-        const element = document.getElementById("latexresult");
+        const element = document.getElementById("equation");
         html2canvas(element).then((canvas) => {
           const dataURL = canvas.toDataURL("image/png");
           download(dataURL, "latex.png");
@@ -112,3 +120,13 @@ function download(url, filename) {
   document.body.removeChild(link);
 }
 
+function hideTags() {
+  var allMathTags = document.getElementsByTagName('math');
+
+  // 선택된 태그들을 순회하며 조건을 만족하는 태그들을 삭제
+  for (var i = 0; i < allMathTags.length; i++) {
+    if (allMathTags[i].getAttribute('xmlns') === 'http://www.w3.org/1998/Math/MathML' && allMathTags[i].getAttribute('display') === 'block') {
+      allMathTags[i].parentNode.removeChild(allMathTags[i]);
+    }
+  }
+}
