@@ -57,11 +57,14 @@ body {
 	transition: background-color 0.3s ease;
   }
 
-  /* #get_api_key a:hover {
+  #get_api_key a:hover {
 	background-color: #016360;
-  } */
+	color:white;
+  }
 
-  #submit-btn {
+  /*translate button*/
+
+  #btn-en {
 	margin-left: 10px;
 	padding: 10px 20px;
 	background-color: #008080;
@@ -72,7 +75,22 @@ body {
 	transition: background-color 0.3s ease;
   }
 
-  #submit-btn:hover {
+  #btn-en:hover {
+	background-color: #016360;
+  }
+
+  #btn-ko {
+	margin-left: 10px;
+	padding: 10px 20px;
+	background-color: #008080;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+
+  #btn-ko:hover {
 	background-color: #016360;
   }
 
@@ -161,7 +179,7 @@ transition: background-color 0.2s;
 
 /* Hover effect for submit button */
 #submit-btn:hover {
-background-color: #abbbb3;
+background-color: #1b6e45;
 }
 
 /* Hover effect for message containers */
