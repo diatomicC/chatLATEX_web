@@ -1,8 +1,14 @@
-const latexContent = [];
-
 function search() {
   const api_key = document.getElementById('api_key').value
   const keywords = document.getElementById('chat-input').value
+  const resultdiv = document.getElementById("resultdiv");
+  const latexContent = [];
+
+        // resultdiv가 있을 경우에만 초기화하고 값을 출력
+  if (resultdiv) {
+         // resultdiv 내용 초기화
+      resultdiv.innerHTML = "";
+  }
   const messages = [
 { role: 'system', content: 'You are a LaTeX expert.' },
 { role: 'user', content: keywords + 'change this to LaTeX form. Only print the LaTeX equaiton.' },
