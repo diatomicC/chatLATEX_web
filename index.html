@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>LaTeX Chat</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -21,30 +24,17 @@
     <div>
     <div id="api_key_text">
       <!-- <h4>개인이 소유하고 있는 ChatGPT API 키가 있어야 하는 서비스입니다. <br>API 키를 발급 받으시려면 아래의 링크로 들어가주세요.(회원가입 필요)</h4>-->
-      <pre><h4 id="comment" data-lang="comment">[comment]</h4></pre>
-    </div>
-    <div id="api_key_button">
-      <a href="https://platform.openai.com/account/api-keys" target="_blank" data-lang="api_key_button">[api_key_button]</a>
+      <pre><p id="comment" data-lang="comment">[comment]</p></pre>
     </div>
   </div>
     <hr>
   </div>
-
-  <style>
-    #api_key_text {
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    #api_key_button {
-      display: inline-block;
-      margin-left: 40px;
-    }
-  </style>
-
   <div id="input-container">
     <label id='label' for="api_key" data-lang="api_key">API 키: </label>
     <input type="text"  id="api_key" name="api_key" placeholder="Type your own API key here..." name="api_key" required />
+    <div id="api_key_button">
+      <a href="https://platform.openai.com/account/api-keys" target="_blank" data-lang="api_key_button">[api_key_button]</a>
+    </div>
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <div id="input-container">
@@ -62,13 +52,13 @@
     // 언어별 JSON 파일 (간략화)
     const lang = {
         ko: {
-            comment: "ChatGPT를 통해 원하는 공식을 LATEX와 수식이미지로 변환하는 사이트입니다. \n 바꾸기를 원하는 공식을 수식입력창에 넣어주세요. \n EX) 근의 공식, 라플라스 변환 \n\n 개인이 소유하고 있는 ChatGPT API 키가 있어야 하는 서비스입니다.\n API 키를 발급 받으시려면 아래의 링크로 들어가주세요.(회원가입 필요)",
+            comment: "ChatGPT를 통해 원하는 공식을 LATEX와 수식이미지로 변환하는 사이트입니다. \n 바꾸기를 원하는 공식을 수식입력창에 넣어주세요. \n 공식은 일반 수식 또는 한국어로 입력이 가능합니다.\n EX) 근의 공식, 라플라스 변환 \n\n 개인이 소유하고 있는 ChatGPT API 키가 있어야 하는 서비스입니다.\n API 키를 발급 받으시려면 'API 발급 받기'로 버튼을 눌러주세요.(회원가입 필요)",
             api_key_button: "API 발급 받기",
             api_key: "API 키: ",
             equation:"수식입력:"
         },
         en: {
-            comment: "This is a site that converts desired formulas into LATEX and formula images through ChatGPT. \n Enter the formula you want to replace in the formula bar. \n EX) Root formula, Laplace transform \n\nThis service requires a ChatGPT API key owned by an individual.\nTo get an API key, please enter the link below (registration required).",
+            comment: "This is a site that converts desired formulas into LATEX and formula images through ChatGPT. \n Enter the formula you want to replace in the formula bar. \n Formulas can be entered in general formulas or in English.\n EX) Root formula, Laplace transform \n\n This service requires a ChatGPT API key owned by an individual.\n To obtain an API key, click 'API Please click the button 'Get an API Key'. (Membership registration required)",
             api_key_button: "Get an API Key",
             api_key: "API Key: ",
             equation:"Enter a formula:"
