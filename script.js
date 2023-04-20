@@ -90,7 +90,7 @@ function search() {
       downloadButton.innerText = "Download";
       downloadButton.addEventListener("click", () => {
         const canvas = document.createElement("canvas");
-        const element = document.getElementById("equation");
+        const element = document.getElementById("equation-result");
         html2canvas(element).then((canvas) => {
           const dataURL = canvas.toDataURL("image/png");
           download(dataURL, "latex.png");
