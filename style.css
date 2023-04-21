@@ -1,26 +1,26 @@
 /* 작은 화면 크기일 때 */
 @media screen and (max-width: 480px) {
-	#comment {
+	#locale {
 	  font-size: 8px;
 	}
   }
   
   /* 중간 화면 크기일 때 */
   @media screen and (min-width: 481px) and (max-width: 768px) {
-	#comment{
+	#locale{
 	  font-size: 10px;
 	}
   }
   
   /* 큰 화면 크기일 때 */
   @media screen and (min-width: 769px) and (max-width: 1000px)  {
-	#comment {
+	#locale {
 	  font-size: 14px;
 	}
   }
   /* 큰 화면 크기일 때 */
   @media screen and (min-width: 1000px){
-	#comment {
+	#locale {
 	  font-size: 18px;
 	}
 }
@@ -41,7 +41,7 @@ body {
   display: inline-block;
   margin-left: 10px;
 }
-#comment{
+#locale{
 	/*font-family: 'IBM Plex Sans KR', sans-serif;*/
 	font-family: 'Arial';
 	font-weight: 600;
@@ -277,3 +277,21 @@ cursor: pointer;
   
 	}
 }
+
+/*how to get api*/
+
+#howtogetapi {
+	display: inline-block; /* 화면 중간에 있는 인라인 레벨 요소로 설정 */
+	text-align: center; /* 가운데 정렬 */
+	padding: 10px 20px; /* 패딩 설정 */
+	background-color: #ffffff; /* 배경색 지정 */
+	border: 3px solid rgb(255, 255, 255); /* 테두리 설정 */
+	color: black;
+	border-radius: 5px; /* 테두리 굴곡 설정 */
+	font-weight: bold; /* 글씨체 굵기 설정 */
+	cursor: pointer; /* 클릭 가능한 요소로 설정 */
+  }
+  
+  #howtogetapi:hover {
+	background-color: #6fce54; /* 마우스 호버 시 배경색 변경 */
+  }
